@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		356E4593285C10000063030B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E4592285C10000063030B /* AppDelegate.swift */; };
+		356E4595285C10000063030B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E4594285C10000063030B /* SceneDelegate.swift */; };
+		356E459A285C10000063030B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E4598285C10000063030B /* Main.storyboard */; };
+		356E459C285C10070063030B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356E459B285C10070063030B /* Assets.xcassets */; };
+		356E459F285C10070063030B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E459D285C10070063030B /* LaunchScreen.storyboard */; };
+		356E45AA285C10070063030B /* Asurion_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45A9285C10070063030B /* Asurion_iOSTests.swift */; };
+		356E45B9285C13E70063030B /* AsurionInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45B8285C13E70063030B /* AsurionInitialVC.swift */; };
+		356E45BF285C40C30063030B /* PetsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45BE285C40C30063030B /* PetsDataViewModel.swift */; };
+		356E45C1285C42E20063030B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C0285C42E20063030B /* Config.swift */; };
+		356E45C3285C44220063030B /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C2285C44220063030B /* Pets.swift */; };
+		356E45C5285C4AE30063030B /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C4285C4AE30063030B /* NetworkLayer.swift */; };
+		356E45C7285C6DDB0063030B /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C6285C6DDB0063030B /* UIImageView-Extension.swift */; };
+		35BF77A7285C89B400B030A3 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF77A6285C89B400B030A3 /* DetailVC.swift */; };
+		35BF77A9285C92CA00B030A3 /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF77A8285C92CA00B030A3 /* PetTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		356E45A6285C10070063030B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 356E4587285C10000063030B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 356E458E285C10000063030B;
+			remoteInfo = "Asurion-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		356E458F285C10000063030B /* Asurion-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asurion-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		356E4592285C10000063030B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		356E4594285C10000063030B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		356E4599285C10000063030B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		356E459B285C10070063030B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		356E459E285C10070063030B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		356E45A0285C10070063030B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356E45A5285C10070063030B /* Asurion-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asurion-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		356E45A9285C10070063030B /* Asurion_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asurion_iOSTests.swift; sourceTree = "<group>"; };
+		356E45AB285C10070063030B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356E45B8285C13E70063030B /* AsurionInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsurionInitialVC.swift; sourceTree = "<group>"; };
+		356E45BE285C40C30063030B /* PetsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsDataViewModel.swift; sourceTree = "<group>"; };
+		356E45C0285C42E20063030B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		356E45C2285C44220063030B /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
+		356E45C4285C4AE30063030B /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		356E45C6285C6DDB0063030B /* UIImageView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
+		35BF77A6285C89B400B030A3 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		35BF77A8285C92CA00B030A3 /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		356E458C285C10000063030B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356E45A2285C10070063030B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		356E4586285C10000063030B = {
+			isa = PBXGroup;
+			children = (
+				356E4591285C10000063030B /* Asurion-iOS */,
+				356E45A8285C10070063030B /* Asurion-iOSTests */,
+				356E4590285C10000063030B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		356E4590285C10000063030B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				356E458F285C10000063030B /* Asurion-iOS.app */,
+				356E45A5285C10070063030B /* Asurion-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		356E4591285C10000063030B /* Asurion-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				356E45B6285C13000063030B /* Model */,
+				356E45B5285C12ED0063030B /* ViewModel */,
+				356E45B4285C12DC0063030B /* View */,
+				356E4592285C10000063030B /* AppDelegate.swift */,
+				356E4594285C10000063030B /* SceneDelegate.swift */,
+				356E4598285C10000063030B /* Main.storyboard */,
+				356E459B285C10070063030B /* Assets.xcassets */,
+				356E459D285C10070063030B /* LaunchScreen.storyboard */,
+				356E45A0285C10070063030B /* Info.plist */,
+			);
+			path = "Asurion-iOS";
+			sourceTree = "<group>";
+		};
+		356E45A8285C10070063030B /* Asurion-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				356E45A9285C10070063030B /* Asurion_iOSTests.swift */,
+				356E45AB285C10070063030B /* Info.plist */,
+			);
+			path = "Asurion-iOSTests";
+			sourceTree = "<group>";
+		};
+		356E45B4285C12DC0063030B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				356E45B8285C13E70063030B /* AsurionInitialVC.swift */,
+				356E45C6285C6DDB0063030B /* UIImageView-Extension.swift */,
+				35BF77A6285C89B400B030A3 /* DetailVC.swift */,
+				35BF77A8285C92CA00B030A3 /* PetTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		356E45B5285C12ED0063030B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				356E45B7285C130C0063030B /* Network */,
+				356E45BE285C40C30063030B /* PetsDataViewModel.swift */,
+				356E45C4285C4AE30063030B /* NetworkLayer.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		356E45B6285C13000063030B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				356E45C0285C42E20063030B /* Config.swift */,
+				356E45C2285C44220063030B /* Pets.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		356E45B7285C130C0063030B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		356E458E285C10000063030B /* Asurion-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356E45AE285C10070063030B /* Build configuration list for PBXNativeTarget "Asurion-iOS" */;
+			buildPhases = (
+				356E458B285C10000063030B /* Sources */,
+				356E458C285C10000063030B /* Frameworks */,
+				356E458D285C10000063030B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Asurion-iOS";
+			productName = "Asurion-iOS";
+			productReference = 356E458F285C10000063030B /* Asurion-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		356E45A4285C10070063030B /* Asurion-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356E45B1285C10070063030B /* Build configuration list for PBXNativeTarget "Asurion-iOSTests" */;
+			buildPhases = (
+				356E45A1285C10070063030B /* Sources */,
+				356E45A2285C10070063030B /* Frameworks */,
+				356E45A3285C10070063030B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				356E45A7285C10070063030B /* PBXTargetDependency */,
+			);
+			name = "Asurion-iOSTests";
+			productName = "Asurion-iOSTests";
+			productReference = 356E45A5285C10070063030B /* Asurion-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		356E4587285C10000063030B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Shruti;
+				TargetAttributes = {
+					356E458E285C10000063030B = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					356E45A4285C10070063030B = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 356E458E285C10000063030B;
+					};
+				};
+			};
+			buildConfigurationList = 356E458A285C10000063030B /* Build configuration list for PBXProject "Asurion-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 356E4586285C10000063030B;
+			productRefGroup = 356E4590285C10000063030B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				356E458E285C10000063030B /* Asurion-iOS */,
+				356E45A4285C10070063030B /* Asurion-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		356E458D285C10000063030B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356E459F285C10070063030B /* LaunchScreen.storyboard in Resources */,
+				356E459C285C10070063030B /* Assets.xcassets in Resources */,
+				356E459A285C10000063030B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356E45A3285C10070063030B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		356E458B285C10000063030B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356E45C5285C4AE30063030B /* NetworkLayer.swift in Sources */,
+				356E45BF285C40C30063030B /* PetsDataViewModel.swift in Sources */,
+				356E45B9285C13E70063030B /* AsurionInitialVC.swift in Sources */,
+				356E45C1285C42E20063030B /* Config.swift in Sources */,
+				356E45C7285C6DDB0063030B /* UIImageView-Extension.swift in Sources */,
+				35BF77A7285C89B400B030A3 /* DetailVC.swift in Sources */,
+				35BF77A9285C92CA00B030A3 /* PetTableViewCell.swift in Sources */,
+				356E4593285C10000063030B /* AppDelegate.swift in Sources */,
+				356E4595285C10000063030B /* SceneDelegate.swift in Sources */,
+				356E45C3285C44220063030B /* Pets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356E45A1285C10070063030B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356E45AA285C10070063030B /* Asurion_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		356E45A7285C10070063030B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 356E458E285C10000063030B /* Asurion-iOS */;
+			targetProxy = 356E45A6285C10070063030B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		356E4598285C10000063030B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				356E4599285C10000063030B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		356E459D285C10070063030B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				356E459E285C10070063030B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		356E45AC285C10070063030B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		356E45AD285C10070063030B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		356E45AF285C10070063030B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Asurion-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shruti.Asurion-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		356E45B0285C10070063030B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Asurion-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shruti.Asurion-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		356E45B2285C10070063030B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Asurion-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shrey.Asurion-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asurion-iOS.app/Asurion-iOS";
+			};
+			name = Debug;
+		};
+		356E45B3285C10070063030B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Asurion-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shrey.Asurion-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asurion-iOS.app/Asurion-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		356E458A285C10000063030B /* Build configuration list for PBXProject "Asurion-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356E45AC285C10070063030B /* Debug */,
+				356E45AD285C10070063030B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		356E45AE285C10070063030B /* Build configuration list for PBXNativeTarget "Asurion-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356E45AF285C10070063030B /* Debug */,
+				356E45B0285C10070063030B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		356E45B1285C10070063030B /* Build configuration list for PBXNativeTarget "Asurion-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356E45B2285C10070063030B /* Debug */,
+				356E45B3285C10070063030B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 356E4587285C10000063030B /* Project object */;
+}

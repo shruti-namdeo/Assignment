@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pet Clinic-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Pet Clinic" id="BYZ-38-t0r" customClass="AsurionInitialVC" customModule="Asurion_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-ev-m5o">
+                                <rect key="frame" x="10" y="53.999999999999993" width="394" height="79.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="59v-nT-Sy8">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-EP-bH7">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Chat">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6p-wS-JVr">
+                                                <rect key="frame" x="199.66666666666663" y="0.0" width="194.33333333333337" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Call">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Hours MF - 10:00 - 18:00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-yr-iyE">
+                                        <rect key="frame" x="0.0" y="30.000000000000004" width="394" height="49.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49.333333333333343" id="irk-dN-lcb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-mY-qxg">
+                                <rect key="frame" x="10" y="143.33333333333331" width="394" height="728.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pets-reusable-cell" rowHeight="92" id="Koj-Ul-kdW" customClass="PetTableViewCell" customModule="Asurion_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Koj-Ul-kdW" id="n6Y-g0-pZZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="925-gE-GSD">
+                                                    <rect key="frame" x="28" y="19" width="82" height="54"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="a8u-p6-4xM"/>
+                                                        <constraint firstAttribute="width" constant="50" id="k8H-S5-tgb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uBG-x3-ZSM">
+                                                    <rect key="frame" x="118" y="30" width="133" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="925-gE-GSD" firstAttribute="leading" secondItem="n6Y-g0-pZZ" secondAttribute="leadingMargin" constant="8" id="6Rc-W0-RgQ"/>
+                                                <constraint firstItem="uBG-x3-ZSM" firstAttribute="leading" secondItem="925-gE-GSD" secondAttribute="trailing" constant="8" id="NLj-Xm-r3M"/>
+                                                <constraint firstItem="925-gE-GSD" firstAttribute="centerY" secondItem="n6Y-g0-pZZ" secondAttribute="centerY" id="XSw-Ty-ifq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="925-gE-GSD" secondAttribute="bottom" constant="8" id="dKz-aY-Bxk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="petImageView" destination="925-gE-GSD" id="geK-uM-MO0"/>
+                                            <outlet property="petTitleView" destination="uBG-x3-ZSM" id="nRl-hK-8yD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nC3-kT-GcK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="EWv-dW-KNR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4A0-mY-qxg" firstAttribute="top" secondItem="5Et-ev-m5o" secondAttribute="bottom" constant="10" id="APX-l1-A3d"/>
+                            <constraint firstItem="5Et-ev-m5o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KWT-ml-n5D"/>
+                            <constraint firstItem="4A0-mY-qxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="KXT-tP-bVJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4A0-mY-qxg" secondAttribute="trailing" constant="10" id="QG2-oy-fOh"/>
+                            <constraint firstItem="4A0-mY-qxg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="rku-ri-8iw"/>
+                            <constraint firstItem="5Et-ev-m5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="sjK-5d-yFu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Et-ev-m5o" secondAttribute="trailing" constant="10" id="urt-bF-Iu6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="callBtn" destination="h6p-wS-JVr" id="KaR-wt-Qpc"/>
+                        <outlet property="chatBtn" destination="iaC-EP-bH7" id="EAL-C5-Xqz"/>
+                        <outlet property="chatCallButtonsHStackView" destination="59v-nT-Sy8" id="4cj-ZW-Shu"/>
+                        <outlet property="officeTimingsLabel" destination="y9u-yr-iyE" id="knT-GB-mY0"/>
+                        <outlet property="parentSV" destination="5Et-ev-m5o" id="1qW-Q5-lqN"/>
+                        <outlet property="petsList" destination="4A0-mY-qxg" id="JaC-vV-gvx"/>
+                        <segue destination="xw1-v1-BoB" kind="show" identifier="webviewSegue" id="ZYq-Pv-JzX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="26.785714285714285"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="fbn-72-k5W">
+            <objects>
+                <viewController id="xw1-v1-BoB" customClass="DetailVC" customModule="Asurion_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZN7-he-PpW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnY-8d-dAa">
+                                <rect key="frame" x="10" y="10" width="394" height="808"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NnY-8d-dAa" firstAttribute="bottom" secondItem="b0w-gV-g28" secondAttribute="bottom" constant="10" id="A3Y-lM-6VN"/>
+                            <constraint firstItem="NnY-8d-dAa" firstAttribute="top" secondItem="b0w-gV-g28" secondAttribute="top" constant="10" id="bGS-VM-Scm"/>
+                            <constraint firstItem="NnY-8d-dAa" firstAttribute="leading" secondItem="b0w-gV-g28" secondAttribute="leading" constant="10" id="dt3-2H-rbM"/>
+                            <constraint firstItem="b0w-gV-g28" firstAttribute="trailing" secondItem="NnY-8d-dAa" secondAttribute="trailing" constant="10" id="zhG-QB-0fK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b0w-gV-g28"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lsn-HU-FxW"/>
+                    <connections>
+                        <outlet property="webView" destination="NnY-8d-dAa" id="vda-ot-4ki"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7X-KV-i0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730.43478260869574" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+</document>
