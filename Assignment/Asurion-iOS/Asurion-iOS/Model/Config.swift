@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct Config : Codable {
     let settings: Settings
 }

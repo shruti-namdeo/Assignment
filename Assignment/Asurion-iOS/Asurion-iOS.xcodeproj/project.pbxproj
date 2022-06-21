@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3521A71628617F9400864890 /* PetsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3521A71528617F9400864890 /* PetsViewModelTests.swift */; };
+		3521A71828617FF700864890 /* MockAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3521A71728617FF700864890 /* MockAPICall.swift */; };
+		3521A71A2861841900864890 /* MockPetsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3521A7192861841900864890 /* MockPetsLogic.swift */; };
 		356E4593285C10000063030B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E4592285C10000063030B /* AppDelegate.swift */; };
 		356E4595285C10000063030B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E4594285C10000063030B /* SceneDelegate.swift */; };
 		356E459A285C10000063030B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E4598285C10000063030B /* Main.storyboard */; };
@@ -19,8 +22,14 @@
 		356E45C3285C44220063030B /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C2285C44220063030B /* Pets.swift */; };
 		356E45C5285C4AE30063030B /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C4285C4AE30063030B /* NetworkLayer.swift */; };
 		356E45C7285C6DDB0063030B /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E45C6285C6DDB0063030B /* UIImageView-Extension.swift */; };
+		3576A3EF286098BE00181DC5 /* AsurionHomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576A3EE286098BE00181DC5 /* AsurionHomeConstants.swift */; };
+		3576A3F128609EDE00181DC5 /* DetectWorkingHourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576A3F028609EDE00181DC5 /* DetectWorkingHourTests.swift */; };
+		3576A3F32860A17C00181DC5 /* WorkingHourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576A3F22860A17C00181DC5 /* WorkingHourViewModel.swift */; };
 		35BF77A7285C89B400B030A3 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF77A6285C89B400B030A3 /* DetailVC.swift */; };
 		35BF77A9285C92CA00B030A3 /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF77A8285C92CA00B030A3 /* PetTableViewCell.swift */; };
+		35CABD64286191DD0024CBD1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CABD63286191DD0024CBD1 /* SettingsViewModel.swift */; };
+		35CABD66286192200024CBD1 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CABD65286192200024CBD1 /* SettingsViewModelTests.swift */; };
+		35CABD68286195940024CBD1 /* MockSettingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CABD67286195940024CBD1 /* MockSettingLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3521A71528617F9400864890 /* PetsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewModelTests.swift; sourceTree = "<group>"; };
+		3521A71728617FF700864890 /* MockAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPICall.swift; sourceTree = "<group>"; };
+		3521A7192861841900864890 /* MockPetsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPetsLogic.swift; sourceTree = "<group>"; };
 		356E458F285C10000063030B /* Asurion-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asurion-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		356E4592285C10000063030B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		356E4594285C10000063030B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,8 +62,14 @@
 		356E45C2285C44220063030B /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 		356E45C4285C4AE30063030B /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		356E45C6285C6DDB0063030B /* UIImageView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
+		3576A3EE286098BE00181DC5 /* AsurionHomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsurionHomeConstants.swift; sourceTree = "<group>"; };
+		3576A3F028609EDE00181DC5 /* DetectWorkingHourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectWorkingHourTests.swift; sourceTree = "<group>"; };
+		3576A3F22860A17C00181DC5 /* WorkingHourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingHourViewModel.swift; sourceTree = "<group>"; };
 		35BF77A6285C89B400B030A3 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		35BF77A8285C92CA00B030A3 /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		35CABD63286191DD0024CBD1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		35CABD65286192200024CBD1 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		35CABD67286195940024CBD1 /* MockSettingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,12 @@
 			children = (
 				356E45A9285C10070063030B /* Asurion_iOSTests.swift */,
 				356E45AB285C10070063030B /* Info.plist */,
+				3576A3F028609EDE00181DC5 /* DetectWorkingHourTests.swift */,
+				3521A71528617F9400864890 /* PetsViewModelTests.swift */,
+				3521A71728617FF700864890 /* MockAPICall.swift */,
+				3521A7192861841900864890 /* MockPetsLogic.swift */,
+				35CABD65286192200024CBD1 /* SettingsViewModelTests.swift */,
+				35CABD67286195940024CBD1 /* MockSettingLogic.swift */,
 			);
 			path = "Asurion-iOSTests";
 			sourceTree = "<group>";
@@ -119,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				356E45B8285C13E70063030B /* AsurionInitialVC.swift */,
+				3576A3EE286098BE00181DC5 /* AsurionHomeConstants.swift */,
 				356E45C6285C6DDB0063030B /* UIImageView-Extension.swift */,
 				35BF77A6285C89B400B030A3 /* DetailVC.swift */,
 				35BF77A8285C92CA00B030A3 /* PetTableViewCell.swift */,
@@ -132,6 +157,8 @@
 				356E45B7285C130C0063030B /* Network */,
 				356E45BE285C40C30063030B /* PetsDataViewModel.swift */,
 				356E45C4285C4AE30063030B /* NetworkLayer.swift */,
+				3576A3F22860A17C00181DC5 /* WorkingHourViewModel.swift */,
+				35CABD63286191DD0024CBD1 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -253,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3576A3F32860A17C00181DC5 /* WorkingHourViewModel.swift in Sources */,
 				356E45C5285C4AE30063030B /* NetworkLayer.swift in Sources */,
 				356E45BF285C40C30063030B /* PetsDataViewModel.swift in Sources */,
 				356E45B9285C13E70063030B /* AsurionInitialVC.swift in Sources */,
@@ -260,8 +288,10 @@
 				356E45C7285C6DDB0063030B /* UIImageView-Extension.swift in Sources */,
 				35BF77A7285C89B400B030A3 /* DetailVC.swift in Sources */,
 				35BF77A9285C92CA00B030A3 /* PetTableViewCell.swift in Sources */,
+				35CABD64286191DD0024CBD1 /* SettingsViewModel.swift in Sources */,
 				356E4593285C10000063030B /* AppDelegate.swift in Sources */,
 				356E4595285C10000063030B /* SceneDelegate.swift in Sources */,
+				3576A3EF286098BE00181DC5 /* AsurionHomeConstants.swift in Sources */,
 				356E45C3285C44220063030B /* Pets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3521A71828617FF700864890 /* MockAPICall.swift in Sources */,
+				35CABD68286195940024CBD1 /* MockSettingLogic.swift in Sources */,
+				3521A71A2861841900864890 /* MockPetsLogic.swift in Sources */,
+				3576A3F128609EDE00181DC5 /* DetectWorkingHourTests.swift in Sources */,
+				3521A71628617F9400864890 /* PetsViewModelTests.swift in Sources */,
 				356E45AA285C10070063030B /* Asurion_iOSTests.swift in Sources */,
+				35CABD66286192200024CBD1 /* SettingsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

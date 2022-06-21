@@ -11,6 +11,11 @@ import UIKit
 let imageCache = NSCache<NSString, AnyObject>()
 
 extension UIImageView {
+    
+    /// DOwnload and cache Image
+    /// - Parameter url: target image url
+    /// - Parameter imageMode: image fit mode to imageview
+    /// - Parameter completion: handle image after receiving
     func downloadImageFrom(url: URL, imageMode : UIView.ContentMode? = .scaleAspectFit,completion: @escaping ()->()) {
             contentMode = imageMode ?? .scaleAspectFit
             if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) as? UIImage {

@@ -24,11 +24,16 @@ class AsurionInitialVC : UIViewController {
     var configData: Config?
     var petsData: Pets?
     
-    var urlToLoad:String?
+    var selectedPet :Pet?
+    
+    var workingHourViewModel: WorkingHourViewModel!
+    var workDays: String!
+    var startTime: String!
+    var endTime: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupShadowforView()
+        self.title = AsurionHomeConstants.screenTitle.rawValue
         self.petsViewModel = PetsDataViewModel.init(networkLayer: NetworkLayer())
         self.settingsViewModel = SettingsViewModel.init(networkLayer: NetworkLayer())
     }
@@ -39,6 +44,11 @@ class AsurionInitialVC : UIViewController {
     }
     
     func prepareData(){
+           self.getSettingsData()
+           self.getPetsData()
+       }
+    
+    private func getSettingsData(){
         self.settingsViewModel.getSettingsData { (result) in
             switch result {
             case .failure( let error):
@@ -47,23 +57,26 @@ class AsurionInitialVC : UIViewController {
             case .success(let data):
                 //parse data
                 self.configData = data
+                self.workingHourViewModel = WorkingHourViewModel.init(schedule: (self.configData?.settings.workHours)!)
                 self.prepareUI()
             }
         }
-        
+    }
+    
+    private func getPetsData(){
         self.petsViewModel.getPetsData { (result) in
-            switch result {
-            case .failure(let error):
-                self.showAlert(message: error.localizedDescription)
-            case .success(let data):
-                self.petsData = data
-                DispatchQueue.main.async {
-                    self.petsList.dataSource = self
-                    self.petsList.delegate = self
-                    self.petsList.reloadData()
-                }
-            }
-        }
+                   switch result {
+                   case .failure(let error):
+                       self.showAlert(message: error.localizedDescription)
+                   case .success(let data):
+                       self.petsData = data
+                       DispatchQueue.main.async {
+                           self.petsList.dataSource = self
+                           self.petsList.delegate = self
+                           self.petsList.reloadData()
+                       }
+                   }
+               }
     }
     
     func prepareUI(){
@@ -71,29 +84,17 @@ class AsurionInitialVC : UIViewController {
             if let config = self.configData{
                 self.callBtn.isHidden = !(config.settings.isCallEnabled)
                 self.chatBtn.isHidden = !(config.settings.isChatEnabled)
-                self.officeTimingsLabel.text = "Office Hours: \(config.settings.workHours)"
+                self.officeTimingsLabel.text = AsurionHomeConstants.officeHoursLabel.rawValue + config.settings.workHours
             }
         }
     }
-}
-
-extension AsurionInitialVC {
-    /*func setupShadowforView() {
-        // border radius
-        OfficeTimingView.layer.cornerRadius = 30.0
-        
-        // border
-        OfficeTimingView.layer.borderColor = UIColor.lightGray.cgColor
-        OfficeTimingView.layer.borderWidth = 1.5
-        
-        // drop shadow
-        OfficeTimingView.layer.shadowColor = UIColor.black.cgColor
-        OfficeTimingView.layer.shadowOpacity = 0.8
-        OfficeTimingView.layer.shadowRadius = 3.0
-        OfficeTimingView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        
-        officeTimingsLabel.text = "fsdaskjdffhjsdagdfhjklsaghlksdaghjkldsaghjl"
-    } */
+    
+    @IBAction func onChatButtonClicked(_ sender: Any) {
+        showAlert(message: self.workingHourViewModel.isCurrentDateTimeWithinWorkingHours())
+    }
+    @IBAction func onCallButtonClicked(_ sender: Any) {
+        showAlert(message: self.workingHourViewModel.isCurrentDateTimeWithinWorkingHours())
+    }    
 }
 
 extension AsurionInitialVC: UITableViewDataSource, UITableViewDelegate{
@@ -102,20 +103,23 @@ extension AsurionInitialVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pets-reusable-cell") as? PetTableViewCell
-        let pet = self.petsData?.pets[indexPath.row]
-        cell?.petTitleView.text = pet?.title
-        if let urlString = pet?.image_url,  let imageURL = URL.init(string: urlString){
-            cell?.petImageView?.downloadImageFrom(url: imageURL, imageMode: .scaleAspectFill){
-                cell?.setNeedsLayout()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: AsurionHomeConstants.reusableCellIdentifier.rawValue) as? PetTableViewCell{
+            let pet = self.petsData?.pets[indexPath.row]
+            cell.petTitleView.text = pet?.title
+            if let urlString = pet?.image_url,  let imageURL = URL.init(string: urlString){
+                cell.petImageView?.downloadImageFrom(url: imageURL, imageMode: .scaleAspectFill){
+                    cell.setNeedsLayout()
+                }
             }
+            return cell
         }
-        return cell!
+        return UITableViewCell()
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selectedRow = self.petsData?.pets[indexPath.row].content_url {
-            urlToLoad = selectedRow
-            self.performSegue(withIdentifier: "webviewSegue", sender: self)
+        if let selectedRow = self.petsData?.pets[indexPath.row] {
+            self.selectedPet = selectedRow
+            self.performSegue(withIdentifier: AsurionHomeConstants.webSegueIdentifier.rawValue, sender: self)
         }
     }
     
@@ -125,14 +129,14 @@ extension AsurionInitialVC: UITableViewDataSource, UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! DetailVC
-        dest.url = urlToLoad ?? ""
+        dest.pet = selectedPet
     }
 }
 extension AsurionInitialVC {
     func showAlert(message: String) {
         DispatchQueue.main.async {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            let alert = UIAlertController(title: AlertButtonTitles.title.rawValue, message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: AlertButtonTitles.close.rawValue, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         }
     }

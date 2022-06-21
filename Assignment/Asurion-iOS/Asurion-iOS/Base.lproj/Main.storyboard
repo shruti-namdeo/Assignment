@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fc-2x-SDV">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-ev-m5o">
-                                <rect key="frame" x="10" y="53.999999999999993" width="394" height="79.333333333333314"/>
+                                <rect key="frame" x="10" y="98" width="394" height="79.333333333333314"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="59v-nT-Sy8">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -29,6 +29,9 @@
                                                 <state key="normal" title="Chat">
                                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onChatButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06G-VS-vHt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6p-wS-JVr">
                                                 <rect key="frame" x="199.66666666666663" y="0.0" width="194.33333333333337" height="30"/>
@@ -37,6 +40,9 @@
                                                 <state key="normal" title="Call">
                                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onCallButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzW-Qh-lvX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -52,7 +58,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-mY-qxg">
-                                <rect key="frame" x="10" y="143.33333333333331" width="394" height="728.66666666666674"/>
+                                <rect key="frame" x="10" y="187.33333333333331" width="394" height="684.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pets-reusable-cell" rowHeight="92" id="Koj-Ul-kdW" customClass="PetTableViewCell" customModule="Asurion_iOS" customModuleProvider="target">
@@ -108,6 +114,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FYQ-X2-H9S"/>
                     <connections>
                         <outlet property="callBtn" destination="h6p-wS-JVr" id="KaR-wt-Qpc"/>
                         <outlet property="chatBtn" destination="iaC-EP-bH7" id="EAL-C5-Xqz"/>
@@ -127,16 +134,20 @@
             <objects>
                 <viewController id="xw1-v1-BoB" customClass="DetailVC" customModule="Asurion_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZN7-he-PpW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnY-8d-dAa">
-                                <rect key="frame" x="10" y="10" width="394" height="808"/>
+                                <rect key="frame" x="10" y="98" width="394" height="774"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-2X-78b">
+                                <rect key="frame" x="197" y="404" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -149,12 +160,29 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lsn-HU-FxW"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="P5c-2X-78b" id="RUk-HS-lJt"/>
                         <outlet property="webView" destination="NnY-8d-dAa" id="vda-ot-4ki"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7X-KV-i0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="730.43478260869574" y="27.455357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MrP-b3-zQQ">
+            <objects>
+                <navigationController id="4fc-2x-SDV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gbL-v7-0Vg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xfj-ll-tSV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60o-Lb-Xts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="27"/>
         </scene>
     </scenes>
 </document>

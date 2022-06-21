@@ -9,14 +9,33 @@ import Foundation
 import WebKit
 import UIKit
 
-class DetailVC : UIViewController, UIWebViewDelegate {
+/// To display detail of image
+class DetailVC : UIViewController {
     @IBOutlet weak var webView: WKWebView!
-    var url: String!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var pet: Pet!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let urlToLoad = URL.init(string: url) {
+        self.modalPresentationStyle = .fullScreen
+        self.title = pet.title
+        self.activityIndicator.hidesWhenStopped = true
+        self.activityIndicator.startAnimating()
+        self.webView.navigationDelegate = self
+        if let urlToLoad = URL.init(string: pet.content_url) {
         webView.load(URLRequest(url: urlToLoad))
     }
 }
+}
+
+extension DetailVC: WKNavigationDelegate{
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.activityIndicator.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        self.activityIndicator.stopAnimating()
+        
+    }
+        
 }
