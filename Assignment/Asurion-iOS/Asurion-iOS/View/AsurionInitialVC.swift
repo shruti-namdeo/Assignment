@@ -26,7 +26,7 @@ class AsurionInitialVC : UIViewController {
     
     var selectedPet :Pet?
     
-    var workingHourViewModel: WorkingHourViewModel!
+    var workingHourViewModel: WorkingHourViewModel?
     var workDays: String!
     var startTime: String!
     var endTime: String!
@@ -90,10 +90,16 @@ class AsurionInitialVC : UIViewController {
     }
     
     @IBAction func onChatButtonClicked(_ sender: Any) {
-        showAlert(message: self.workingHourViewModel.isCurrentDateTimeWithinWorkingHours())
+        guard let message = self.workingHourViewModel?.isCurrentDateTimeWithinWorkingHours() else {
+            return
+        }
+        showAlert(message: message)
     }
     @IBAction func onCallButtonClicked(_ sender: Any) {
-        showAlert(message: self.workingHourViewModel.isCurrentDateTimeWithinWorkingHours())
+        guard let message = self.workingHourViewModel?.isCurrentDateTimeWithinWorkingHours() else {
+            return
+        }
+        showAlert(message: message)
     }    
 }
 
