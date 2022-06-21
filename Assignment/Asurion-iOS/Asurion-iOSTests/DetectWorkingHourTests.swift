@@ -2,7 +2,6 @@
 //  DetectWorkingHourTests.swift
 //  Asurion-iOSTests
 //
-//  Created by Shrey Shrivastava on 20/06/22.
 //  Copyright © 2022 Shruti. All rights reserved.
 //
 
